@@ -1,0 +1,1 @@
+"""VANTA application package."""
