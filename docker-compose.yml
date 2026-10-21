@@ -1,0 +1,12 @@
+services:
+  vanta:
+    build: .
+    container_name: vanta-app
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    volumes:
+      # Montar models permite actualizar pesos sin reconstruir la imagen
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
